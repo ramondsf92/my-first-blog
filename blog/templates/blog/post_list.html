@@ -16,19 +16,13 @@
                 <li><a href="https://twitter.com/ramonarca92">Twitter</a></li>
             </ul>
         </div>
-        <hr>
-        <div>
-            <p>Publicado: 06.07.2018, 09:17</p>
-           <h2><a href="">Meu primeiro post</a></h2>
-           <p>Não sei o que escrever aqui. Estou confuso. Quero café. Não quero ir pra aula de física. Mas sei que devo,
-           pois já reprovei uma vez. Mas sei mais ou menos que que vai ter. </p>
-        </div>
-        <hr>
-        <div>
-            <p>Publicado: 06.07.2018, 09:20</p>
-            <h2><a href="">Meu segundo post</a></h2>
-            <p>Bora ver depois se dá pra editar isso aqui através do admin lá, ou de algum outro jeito. Sei lá.</p>
-        </div>
-        <hr>
+        {% for post in posts %}
+            <hr>
+            <div>
+                <p>Publicado: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
