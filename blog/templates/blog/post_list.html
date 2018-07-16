@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-    <head lang="pt-br">
-        <title>Primeiro Heterohexa</title>
-    </head>
-    <body>
-        <div>
-            <h1>Inicio da página</h1>
-           <h2>Bora criar o blog porra!</h2>
-         </div>
+{% extends 'blog/base.html' %}
 
-         <div>
-            <h3>Sobre mim</h3>
-             <a href="https://ibb.co/bRkYu8">
-                 <img src="https://thumb.ibb.co/bRkYu8/26112372_1385799621529490_8401305985051074832_n.jpg" alt="26112372_1385799621529490_8401305985051074832_n" border="0">
-             </a>
-                 <ul>
-                <li><a href="https://github.com/ramondsf92">Github</a></li>
-                <li><a href="https://www.facebook.com/ramontera">Facebook</a></li>
-                <li><a href="https://twitter.com/ramonarca92">Twitter</a></li>
-            </ul>
-        </div>
-        {% for post in posts %}
-            <hr>
-            <div>
-                <p>Publicado: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+{% block content %}
+ {% for post in posts %}
+    <hr>
+        <div class="post">
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
             </div>
-        {% endfor %}
-    </body>
-</html>
+            <div class="publish-auth">
+                <p>by: {{ post.author }}</p>
+            </div>
+        </div>
+{% endfor %}
+{% endblock %}
