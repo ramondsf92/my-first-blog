@@ -65,3 +65,15 @@ h1, h2, h3, h4 {
 .about h3 {
     color: #FFFFFF;
 }
+
+.post-edit h1 {
+    color: #ffffff;
+}
+
+button {
+    color: #000000;
+}
+
+.btn, .btn-default {
+    float: left;
+}
