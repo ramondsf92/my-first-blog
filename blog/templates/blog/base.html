@@ -12,8 +12,16 @@
             <h1>Inicio da página</h1>
            <h4>Bora criar o blog porra!</h4>
          </div>
-
-         <div class="about">
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="about">
             <h3>Sobre mim</h3>
              <a href="https://ibb.co/bRkYu8">
                  <img src="https://thumb.ibb.co/bRkYu8/26112372_1385799621529490_8401305985051074832_n.jpg" alt="26112372_1385799621529490_8401305985051074832_n" border="0">
@@ -23,14 +31,6 @@
                 <li><a href="https://www.facebook.com/ramontera">Facebook</a></li>
                 <li><a href="https://www.instagram.com/ramondsf92/">Instagram</a></li>
             </ul>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
         </div>
     </body>
 </html>

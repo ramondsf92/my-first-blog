@@ -1,5 +1,6 @@
 body {
     padding-left: 15px;
+    background-color: #000000;
 }
 
 .page-header {
@@ -9,7 +10,7 @@ body {
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -20,10 +21,6 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
-}
-
-.date {
-    color: darkorange;
 }
 
 .save {
@@ -45,10 +42,26 @@ h1, h2, h3, h4 {
     margin-bottom: 70px;
 }
 
+.post h1 {
+    color: #ba2121;
+}
+
 .post h1 a, .post h1 a:visited {
     color: #ba2121;
 }
 
-.publish-auth {
+.post p {
+    color: #ffffff;
+}
+
+.date {
     color: darkorange;
+}
+
+.publish-auth p {
+    color: darkorange;
+}
+
+.about h3 {
+    color: #FFFFFF;
 }
